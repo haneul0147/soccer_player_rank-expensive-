@@ -6,18 +6,19 @@ import pandas as pd
 from PIL import Image
 from streamlit.proto.Audio_pb2 import Audio
 
-
 from position import run_postiton_app
+
 
 
 # 해야할것들 : 영상 넣기 , 배경화면 넣기
 def main():
 
-    img1=Image.open('data/image_01.jpg')
-    img3=Image.open('data/image_03.jpg')
-    img4=Image.open('data/image_04.jpg')
-    img5=Image.open('data/image_05.jpg')
-    img6=Image.open('data/image_06.jpg')
+    img1=Image.open('data/image_01.jpg') # 음바페 사진 
+    img3=Image.open('data/image_03.jpg') # 리그 사진들 
+    img4=Image.open('data/image_04.jpg') # 홀란드 
+    img5=Image.open('data/image_05.jpg') # 케인
+    img6=Image.open('data/image_06.jpg') # 파리 
+    # 몸값에 대한 데이터 가져오기
     df=pd.read_csv('data/players01.csv')
     
     # 사이드 바 만들기
@@ -27,12 +28,17 @@ def main():
     
     # 'Total'별 선수 페이지 만들기
     if choice == 'Home':
-        st.title('who is expensives ransom??')
-        st.image(img3,width=300)
+        st.title('원하는 선수 찾기')
+        st.title('###사진 넣기')
+        st.text_input('원하는 축구선수 이름 적으시오')
+        st.write('선수 이름을 적으면 맞춰서 데이터 주기')
+
+        #st.image(img3,width=300)
         
         
     if choice == 'Rank':  
-        st.title('최고의 주가를 가지고 있는 선수들')
+        st.title('## 랭킹사진넣기')
+        st.title('최고 몸값의  선수')
          
         if st.checkbox('가장 몸값높은 선수 TOP5 보기'):
             st.write('1위 : 킬리안 음바페 ( 한화: 약 1575억)')
@@ -59,9 +65,11 @@ def main():
             st.dataframe(df.iloc[:1,1:11]) 
             st.text('음바페 하이라이트 링크 : https://www.youtube.com/watch?v=QTu_pO8eMxc')
     elif choice == 'Position 선수 선택하기':
+        # 포지션 파일에 함수 
         run_postiton_app()
 
-            
+    elif choice == 'Team 선수 선택하기':
+        pass  
            
             
         
