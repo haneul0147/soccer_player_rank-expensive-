@@ -5,9 +5,12 @@ import pandas as pd
 # 사진을 가져오는 라이브러리
 from PIL import Image
 from streamlit.proto.Audio_pb2 import Audio
+from chart import run_chart_app
 
 from position import run_postiton_app
-
+img43=Image.open('data/image_43.jpg') #프리미어 리그 아이콘
+st.set_page_config(page_title='Expensive soccer player Top 500',
+page_icon=img43,layout='wide',initial_sidebar_state='collapsed')
 
 
 # 해야할것들 : 영상 넣기 , 배경화면 넣기
@@ -20,18 +23,20 @@ def main():
     img6=Image.open('data/image_06.jpg') # 파리 
     img41=Image.open('data/image_41.jpg') #단상
     img42=Image.open('data/image_42.jpg') #손흥민
+   
+
     # 몸값에 대한 데이터 가져오기
     df=pd.read_csv('data/players01.csv',index_col=0)
     
     # 사이드 바 만들기
    
     choice=st.sidebar.radio('',
-    ['Home','Rank','Position 선수 선택하기'])
+    ['Home','Rank','Position 선수 선택하기','차트로 보기'])
     
     # 'Total'별 선수 페이지 만들기
     if choice == 'Home':
         st.title('축구선수 몸값 TOP500')
-        st.image(img3,width=600)
+        st.image(img3,use_column_width=True)
         
         names =st.text_input('원하는 선수를 입력하세요')
         if names :
@@ -81,8 +86,8 @@ def main():
         # 포지션 파일에 함수 
         run_postiton_app()
 
-    elif choice == 'Team 선수 선택하기':
-        pass  
+    elif choice == '차트로 보기':
+        run_chart_app() 
            
             
         
@@ -93,7 +98,7 @@ def main():
 
 
 
-
+# https://blog.streamlit.io/introducing-new-layout-options-for-streamlit/
 
 
 
