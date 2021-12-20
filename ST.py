@@ -51,19 +51,19 @@ def run_ST():
             st.write('1위 ! Robert Lewandowski(로베르트 레반도프스키)')
             st.write('소속팀:FC 바이에른 뮌헨')
             st.image(img7,width=450)
-            st.dataframe(cf_goals.iloc[:3,[1,8,5,2]])
+            st.dataframe(cf_goals.iloc[:3,[1,8,5,6]])
         # 중앙 공격수 중 가장 몸값이 비싼 선수
         if choice_fw2=='가장 몸값이 비싼 선수' :
             st.write('1위 ! Kylian Mbappé(킬리안 음바페)')
             st.write('소속팀:파리 생 제르망')
             st.image(img1,width=450)               
-            st.dataframe(cf_value.iloc[:3,[1,4,6,3]])
+            st.dataframe(cf_value.iloc[:3,[1,4,6,5]])
         # 중앙 공격수 중 가장 경기를많이 뛴 선수
         if choice_fw2=='가장 많은 경기를 뛴 선수':
             st.write('1위 ! Karim Adeyemi(카림 아데예미)')
             st.write('소속팀:FC 레드불 잘츠부르크')
             st.image(img8,width=450)                
-            st.dataframe(cf_mat.iloc[:3,1:9])
+            st.dataframe(cf_mat.iloc[:3,[1,7,4,6]])
     
     
     # 세컨드 스트라이커 선택
@@ -74,19 +74,19 @@ def run_ST():
             st.write('1위 ! Paulo Dybala(파울로 디발라)')
             st.write('소속팀:유벤투스 FC')
             st.image(img9,width=450)
-            st.dataframe(ss_goals.iloc[:3,[1,8,5,2]]) 
+            st.dataframe(ss_goals.iloc[:3,[1,8,5,6]]) 
         # 세컨드 스트라이크 중 가장 몸값이 비싼 선수
         if choice_fw2=='가장 몸값이 비싼 선수' :
             st.write('1위 ! João Félix(주앙 펠릭스)')
             st.write('소속팀:아틀레티코 마드리드')
             st.image(img10,width=450)               
-            st.dataframe(ss_value.iloc[:3,[1,4,6,3]])
+            st.dataframe(ss_value.iloc[:3,[1,4,6,5]])
         # 세컨드 스트라이크 중 가장 경기를 많이 뛴 선수
         if choice_fw2=='가장 많은 경기를 뛴 선수' :
             st.write('1위 ! Thomas Müller(토마스 뮐러)')
             st.write('소속팀:FC 바이에른 뮌헨')
             st.image(img11,width=450)               
-            st.dataframe(ss_mat.iloc[:3,1:9])
+            st.dataframe(ss_mat.iloc[:3,[1,7,4,6]])
    
    
     # Left winger  왼쪽 윙어 선택
@@ -97,19 +97,19 @@ def run_ST():
             st.write('1위 ! Vinícius Júnior(비니시우스 주니오르)')
             st.write('소속팀:레알마드리드 CF')
             st.image(img12,width=450)
-            st.dataframe(ss_goals.iloc[:3,[1,8,5,2]]) 
+            st.dataframe(ss_goals.iloc[:3,[1,8,5,6]]) 
         # 왼쪽 윙어 중 가장 몸값이 비싼 선수
         if choice_fw2=='가장 몸값이 비싼 선수' :
             st.write('1위 ! Jack Grealish(잭 그릴리시)')
             st.write('소속팀:맨처스터 시티 FC')
             st.image(img13,width=450)               
-            st.dataframe(ss_value.iloc[:3,[1,4,6,3]])
+            st.dataframe(ss_value.iloc[:3,[1,4,6,5]])
         # 왼쪽 윙어 중 가장 경기를 많이 뛴 선수
         if choice_fw2=='가장 많은 경기를 뛴 선수' :
             st.write('1위 ! Everton Soares(에베르통 소아레스)')
             st.write('소속팀:SL 벤피카')
             st.image(img14,width=450)               
-            st.dataframe(ss_mat.iloc[:3,1:9])
+            st.dataframe(ss_mat.iloc[:3,[1,7,4,6]])
 
      # Right winger  오른쪽 윙어 선택
     if choice_fw =='Right Winger(오른쪽 윙어)' :
@@ -119,16 +119,16 @@ def run_ST():
             st.write('1위 ! Mohamed Salah(모하메드 살라)')
             st.write('소속팀:리버풀 FC')
             st.image(img15,width=450)
-            st.dataframe(rw_goals.iloc[:3,[1,8,5,2]]) 
+            st.dataframe(rw_goals.iloc[:3,[1,8,5,6]]) 
         # 왼쪽 윙어 중 가장 몸값이 비싼 선수
         if choice_fw2=='가장 몸값이 비싼 선수' :
             st.write('1위 ! Mohamed Salah(모하메드 살라)')
             st.write('소속팀:리버풀 FC')
             st.image(img15,width=450)               
-            st.dataframe(rw_value.iloc[:3,[1,4,6,3]])
+            st.dataframe(rw_value.iloc[:3,[1,4,6,5]])
         # 오른쪽 윙어 중 가장 경기를 많이 뛴 선수
         if choice_fw2=='가장 많은 경기를 뛴 선수' :
             st.write('1위 ! Tetê (마테우스 카르도주 레무스 마르칭스)')
             st.write('소속팀:FC 샤흐타르 도네츠크')
             st.image(img16,width=450)               
-            st.dataframe(rw_mat.iloc[:3,1:9])
+            st.dataframe(rw_mat.iloc[:3,[1,7,4,6]])

@@ -64,20 +64,20 @@ def run_mf():
             st.write('1위 ! Christopher Nkunku(크리스토퍼 은쿤쿠)')
             st.write('소속팀:RB 라이프치히')
             st.image(img28,width=450)
-            st.dataframe(am_goals.iloc[:3,[1,8,5,2]]) 
+            st.dataframe(am_goals.iloc[:3,[1,8,5,6]]) 
 
         # 공격형 미드필더 중 가장 몸값이 비싼 선수
         if choice_mf2=='가장 몸값이 비싼 선수' :
             st.write('1위 ! Kevin De Bruyne (케빈 더 브라위너)')
             st.write('소속팀:맨체스터 시티 FC')
             st.image(img27,width=450)               
-            st.dataframe(am_value.iloc[:3,[1,4,6,3]])
+            st.dataframe(am_value.iloc[:3,[1,4,6,5]])
         # 공격형 미드필더 중 가장 경기를많이 뛴 선수
         if choice_mf2=='가장 많은 경기를 뛴 선수':
             st.write('1위 ! Sofiane Diop(소피앙 디옵)')
             st.write('소속팀:AS 모나코 ')
             st.image(img29,width=450)                
-            st.dataframe(am_mat.iloc[:3,1:9])
+            st.dataframe(am_mat.iloc[:3,[1,7,4,6]])
 
 
     
@@ -94,20 +94,20 @@ def run_mf():
             st.write('1위 ! Lorenzo Pellegrini(로렌초 펠레그리니)')
             st.write('소속팀:AS 로마')
             st.image(img19,width=450)
-            st.dataframe(cam_goals.iloc[:3,[1,8,5,2]]) 
+            st.dataframe(cam_goals.iloc[:3,[1,8,5,6]]) 
 
         # 중앙 미드필더 중 가장 몸값이 비싼 선수
         if choice_mf2=='가장 몸값이 비싼 선수' :
             st.write('1위 ! Frenkie de Jong (프렌키 데 용)')
             st.write('소속팀:FC 바로셀로나')
             st.image(img17,width=450)               
-            st.dataframe(cam_value.iloc[:3,[1,4,6,3]])
+            st.dataframe(cam_value.iloc[:3,[1,4,6,5]])
         # 중앙 미드필더 중 가장 경기를많이 뛴 선수
         if choice_mf2=='가장 많은 경기를 뛴 선수':
             st.write('1위 ! Wendel(웬델)')
             st.write('소속팀:FC 제니트 상트페테르부르크 ')
             st.image(img18,width=450)                
-            st.dataframe(cam_mat.iloc[:3,1:9])
+            st.dataframe(cam_mat.iloc[:3,[1,7,4,6]])
 
 
         #-----------------------수비형 미드필더
@@ -119,21 +119,21 @@ def run_mf():
             st.write('1위 ! Joshua Kimmich(요주아 키미히)')
             st.write('소속팀:FC 바이에른 뮌헨')
             st.image(img20,width=450)
-            st.dataframe(dm_goals.iloc[:3,[1,8,5,2]]) 
+            st.dataframe(dm_goals.iloc[:3,[1,8,5,6]]) 
 
         # 수비형 미드필더 중 가장 몸값이 비싼 선수
         if choice_mf2=='가장 몸값이 비싼 선수' :
             st.write('1위 ! Joshua Kimmich (요주아 키미히)')
             st.write('소속팀:FC 바이에른 뮌헨')
             st.image(img20,width=450)               
-            st.dataframe(dm_value.iloc[:3,[1,4,6,3]])
+            st.dataframe(dm_value.iloc[:3,[1,4,6,5]])
         # 수비형 미드필더 중 가장 경기를많이 뛴 선수
         if choice_mf2=='가장 많은 경기를 뛴 선수':
             st.write('공동 1위 ! 산드로 토날리/오렐리앵 추아메니')
             st.write('소속팀:AC밀란/ AS모나코 ')
             st.image(img21,width=300)
             st.image(img22,width=300)                
-            st.dataframe(dm_mat.iloc[:3,1:9])
+            st.dataframe(dm_mat.iloc[:3,[1,7,4,6]])
 
 # ----------------왼쪽 미드필더 
     if choice_mf == 'Left Midfield(왼쪽 미드필더)':
@@ -144,20 +144,20 @@ def run_mf():
             st.write('1위 ! 루이스 디아스 (Luis Díaz)')
             st.write('소속팀:FC포르투')
             st.image(img24,width=450)
-            st.dataframe(lm_goals.iloc[:3,[1,8,5,2]]) 
+            st.dataframe(lm_goals.iloc[:3,[1,8,5,6]]) 
 
         # 왼쪽 미드필더 중 가장 몸값이 비싼 선수
         if choice_mf2=='가장 몸값이 비싼 선수' :
             st.write('1위 ! Bukayo Saka (부카요 사카)')
             st.write('소속팀:아스널 FC')
             st.image(img23,width=450)               
-            st.dataframe(lm_value.iloc[:3,[1,4,6,3]])
+            st.dataframe(lm_value.iloc[:3,[1,4,6,5]])
         # 왼쪽 미드필더 중 가장 경기를많이 뛴 선수
         if choice_mf2=='가장 많은 경기를 뛴 선수':
             st.write('1위 ! 루이스 디아스 (Luis Díaz)')
             st.write('소속팀:FC포르투 ')
             st.image(img24,width=450)
-            st.dataframe(lm_mat.iloc[:3,1:9])
+            st.dataframe(lm_mat.iloc[:3,[1,7,4,6]])
             
             # with col1:
             #     st.image(img21,width=300)
@@ -168,22 +168,22 @@ def run_mf():
     if choice_mf == 'Right Midfield(오른쪽 미드필더)':
         choice_mf2=st.selectbox('선택',['선택','득점률 가장 높은 미드필더','가장 몸값이 비싼 선수','가장 많은 경기를 뛴 선수'])    
        
-        # 왼쪽 미드필더 중 득점률이 높은 미드필더
+        # 오른쪽 미드필더 중 득점률이 높은 미드필더
         if choice_mf2=='득점률 가장 높은 미드필더':
             st.write('1위 ! Ridle Baku (리들레 바쿠)')
             st.write('소속팀:Vfl 볼프스부르크')
             st.image(img25,width=450)
-            st.dataframe(rm_goals.iloc[:3,[1,8,5,2]]) 
+            st.dataframe(rm_goals.iloc[:3,[1,8,5,6]]) 
 
-        # 왼쪽 미드필더 중 가장 몸값이 비싼 선수
+        # 오른쪽 미드필더 중 가장 몸값이 비싼 선수
         if choice_mf2=='가장 몸값이 비싼 선수' :
             st.write('1위 ! Jesús Manuel Corona (헤수스 코로나)')
             st.write('소속팀:FC 포르투')
             st.image(img26,width=450)               
-            st.dataframe(rm_value.iloc[:3,[1,4,6,3]])
-        # 왼쪽 미드필더 중 가장 경기를많이 뛴 선수
+            st.dataframe(rm_value.iloc[:3,[1,4,6,5]])
+        # 오른쪽 미드필더 중 가장 경기를많이 뛴 선수
         if choice_mf2=='가장 많은 경기를 뛴 선수':
             st.write('1위 ! Ridle Baku (리들레 바쿠)')
             st.write('소속팀:Vfl 볼프스부르크 ')
             st.image(img25,width=450)
-            st.dataframe(rm_mat.iloc[:3,1:9])
+            st.dataframe(rm_mat.iloc[:3,[1,7,4,6]])

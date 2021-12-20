@@ -24,10 +24,10 @@ def run_gk():
         st.write('1위 ! Illan Meslier(일란 메실러)')
         st.write('소속팀:리즈 유나이티드FC')
         st.image(img39,width=450)
-        st.dataframe(gk_mat.iloc[:3,1:9]) 
+        st.dataframe(gk_mat.iloc[:3,[1,7,4,6]]) 
 
     elif selcted_gk == '가장 몸값이 비싼 선수':
         st.write('1위 ! Jan Oblak(얀 오블라크)')
         st.write('소속팀:아틀레티코 마드리드 (AT)')
         st.image(img40,width=450)
-        st.dataframe(gk_value.iloc[:3,1:9]) 
+        st.dataframe(gk_value.iloc[:3,[1,4,6,5]]) 

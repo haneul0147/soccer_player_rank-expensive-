@@ -43,19 +43,19 @@ def run_df():
             st.write('1위 ! Aritz Elustondo(아리츠 엘루스톤도)')
             st.write('소속팀:레알 소시에다드')
             st.image(img30,width=450)
-            st.dataframe(cb_goals.iloc[:3,[1,8,5,2]]) 
+            st.dataframe(cb_goals.iloc[:3,[1,8,5,6]]) 
         # 중앙 수비수 중 가장 몸값이 비싼 선수
         if choice_de2=='가장 몸값이 비싼 선수' :
             st.write('1위 ! Rúben Dias(후벵 디아스)')
             st.write('소속팀:맨체스터 시티 FC')
             st.image(img31,width=450)               
-            st.dataframe(cb_value.iloc[:3,[1,4,6,3]])
+            st.dataframe(cb_value.iloc[:3,[1,4,6,5]])
         # 중앙 수비수 중 가장 경기를많이 뛴 선수
         if choice_de2=='가장 많은 경기를 뛴 선수':
             st.write('1위 ! Benoît Badiashile(브누와 바디아쉴)')
             st.write('소속팀:AS 모나코')
             st.image(img32,width=450)                
-            st.dataframe(cb_mat.iloc[:3,1:9])
+            st.dataframe(cb_mat.iloc[:3,[1,7,4,6]])
     
     #------------------------------------왼쪽 수비수
     # 왼쪽 수비수 선택
@@ -66,19 +66,19 @@ def run_df():
             st.write('1위 ! Raphaël Guerreiro(하파엘 게헤이루)')
             st.write('소속팀:보루시아 도르트문트')
             st.image(img33,width=450)
-            st.dataframe(lb_goals.iloc[:3,[1,8,5,2]]) 
+            st.dataframe(lb_goals.iloc[:3,[1,8,5,6]]) 
         # 왼쪽 수비수 중 가장 몸값이 비싼 선수
         if choice_de2=='가장 몸값이 비싼 선수' :
             st.write('1위 ! Alphonso Davies(알폰소 데이비스)')
             st.write('소속팀:FC 바이에른 뮌헨')
             st.image(img34,width=450)               
-            st.dataframe(lb_value.iloc[:3,[1,4,6,3]])
+            st.dataframe(lb_value.iloc[:3,[1,4,6,5]])
         # 왼쪽 수비수 중 가장 경기를많이 뛴 선수
         if choice_de2=='가장 많은 경기를 뛴 선수':
             st.write('1위 ! Alejandro Grimaldo(알렉스 그리말도)')
             st.write('소속팀:SL 벤피카')
             st.image(img35,width=450)                
-            st.dataframe(lb_mat.iloc[:3,1:9])
+            st.dataframe(lb_mat.iloc[:3,[1,7,4,6]])
 
     #------------------------------------오른쪽 수비수
     # 오른쪽 수비수 선택
@@ -89,16 +89,16 @@ def run_df():
             st.write('1위 ! Noussair Mazraoui(노사이르 마즈라우이)')
             st.write('소속팀:AFC 아약스')
             st.image(img36,width=450)
-            st.dataframe(rb_goals.iloc[:3,[1,8,5,2]]) 
+            st.dataframe(rb_goals.iloc[:3,[1,8,5,6]]) 
         # 오른쪽 수비수 중 가장 몸값이 비싼 선수
         if choice_de2=='가장 몸값이 비싼 선수' :
             st.write('1위 ! Trent Alexander-Arnold(트렌트 알렉산더아놀드)')
             st.write('소속팀:리버풀 FC')
             st.image(img37,width=450)               
-            st.dataframe(rb_value.iloc[:3,[1,4,6,3]])
+            st.dataframe(rb_value.iloc[:3,[1,4,6,5]])
         # 오른쪽 수비수 중 가장 경기를많이 뛴 선수
         if choice_de2=='가장 많은 경기를 뛴 선수':
             st.write('1위 ! Dodô(도도)')
             st.write('소속팀:FC 샤흐타르 도네츠크')
             st.image(img38,width=450)                
-            st.dataframe(rb_mat.iloc[:3,1:9])
+            st.dataframe(rb_mat.iloc[:3,[1,7,4,6]])
