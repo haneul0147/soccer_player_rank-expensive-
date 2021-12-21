@@ -24,10 +24,7 @@ def run_team():
         means2=round(means2,1)
 
         if st.checkbox('팀 선수 경기 그래프보기'):
-            # fig2 = plt.figure()
-            # plt.hist(data=df2, x='Matches',rwidth=0.7,bins=range(0,26,1))                   
-            # plt.xticks()
-            # st.pyplot(fig2)
+           
             chart_data = pd.DataFrame(means)
             st.bar_chart(chart_data,use_container_width=True)
             
@@ -35,12 +32,10 @@ def run_team():
             
         elif st.checkbox('팀 골 평균 그래프 보기'):
             fig2 = plt.figure()
-            # plt.hist(data=df2, x='Goals',rwidth=0.7,bins=range(0,10,1))                   
-            # plt.xticks()
-            # st.pyplot(fig2)
+            
             chart_data = pd.DataFrame(means2)
             st.bar_chart(chart_data,use_container_width=True)
-        
+            
             st.subheader(choice+'의팀 평균 골 갯수는'+str(means2.mean()) + '개 입니다.')
          
         st.image(img44,width=450)        

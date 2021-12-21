@@ -18,10 +18,22 @@ def run_country():
         df2=df[df['Country']==choice]
         means=df2['Position']
         means=means.value_counts()
+        means2=df2['Goals']
+        means2=means2.value_counts()
+        means2=round(means2,1)
     
+
+        
         if st.checkbox('국가 별 포지션당 선수 수 보기'):
             chart_data = pd.DataFrame(means)
             st.bar_chart(chart_data,use_container_width=True)
+        
+        if st.checkbox('국가 별 골 갯수 보기'):
+            chart_data = pd.DataFrame(means2)
+            st.bar_chart(chart_data,use_container_width=True)
+            st.subheader(choice+'의팀 평균 골 갯수는'+str(means2.mean()) + '개 입니다.')
+        st.write(means2.mean())
+
         #     # chart_data = df2['position']
         #     # st.line_chart(chart_data) 
         
