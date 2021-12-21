@@ -22,7 +22,7 @@ def main():
     img42=Image.open('data/image_42.jpg') #손흥민
     # 몸값에 대한 데이터 가져오기
     df=pd.read_csv('data/players01.csv',index_col=0)
-    
+    df_name=df['Name'] 
     # 사이드 바 만들기
    
     choice=st.sidebar.radio('',
@@ -34,8 +34,11 @@ def main():
         st.image(img3,width=600)
         
         names =st.text_input('원하는 선수를 입력하세요')
-        if names :
-            st.dataframe(df.loc[df['Name'] == names,])        
+        # if names == df['Name']:
+        st.dataframe(df.loc[df['Name'] == names,])
+        
+        st.error('선수이름이 맞지 않습니다.')
+        #     st.write("선수 이름이 맞지않아요")     
         st.write('선수 이름 정보')
         st.write(df['Name'].values)
 
