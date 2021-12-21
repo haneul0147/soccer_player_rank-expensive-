@@ -67,7 +67,7 @@ def run_ST():
     
     
     # 세컨드 스트라이커 선택
-    if choice_fw =='Second Striker(세컨드 스트라이커)' :
+    elif choice_fw =='Second Striker(세컨드 스트라이커)' :
         choice_fw2=st.selectbox('선택',['선택','득점률 가장 높은 공격수','가장 몸값이 비싼 선수','가장 많은 경기를 뛴 선수'])
         # 세컨드 스트라이크 중 득점률이 높은 공격수
         if choice_fw2=='득점률 가장 높은 공격수':
@@ -90,7 +90,7 @@ def run_ST():
    
    
     # Left winger  왼쪽 윙어 선택
-    if choice_fw =='Left Winger(왼쪽 윙어)' :
+    elif choice_fw =='Left Winger(왼쪽 윙어)' :
         choice_fw2=st.selectbox('선택',['선택','득점률 가장 높은 공격수','가장 몸값이 비싼 선수','가장 많은 경기를 뛴 선수'])
         # 왼쪽 윙어 중 득점률이 높은 공격수 
         if choice_fw2=='득점률 가장 높은 공격수':
@@ -112,7 +112,7 @@ def run_ST():
             st.dataframe(ss_mat.iloc[:3,[1,7,4,6]])
 
      # Right winger  오른쪽 윙어 선택
-    if choice_fw =='Right Winger(오른쪽 윙어)' :
+    elif choice_fw =='Right Winger(오른쪽 윙어)' :
         choice_fw2=st.selectbox('선택',['선택','득점률 가장 높은 공격수','가장 몸값이 비싼 선수','가장 많은 경기를 뛴 선수'])
         # 오른쪽 윙어 중 득점률이 높은 공격수 
         if choice_fw2=='득점률 가장 높은 공격수':

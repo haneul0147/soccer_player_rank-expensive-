@@ -9,8 +9,9 @@ from ST import run_ST
 
 
 def run_postiton_app():
-           
+                        
     st.title('포지션별 선수 찾기')
+    
     choice_p=st.selectbox('포지션 선택',['선택', 'ST(공격수)','MF(미드필더)',
                     'DF(수비수)','GK (골키퍼)'])
     if choice_p =='ST(공격수)':
@@ -24,5 +25,5 @@ def run_postiton_app():
     elif choice_p =='GK (골키퍼)':
         run_gk()
             
-                
+           
         
