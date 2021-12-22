@@ -8,8 +8,9 @@ import plotly.express as px
 df=pd.read_csv('data/players01.csv',index_col=0)
 img44=Image.open('data/image_44.jpg') # 리그사진
 def run_team():  
+    st.title('Team 별로 선수 보기') 
     if st.checkbox('Click here') :
-        st.title('Team 별로 선수 보기')        
+              
         
         
         st.subheader('원하는 팀을 선택하세요')   
@@ -42,6 +43,7 @@ def run_team():
            
             chart_data = pd.DataFrame(chart1)
             st.bar_chart(chart_data,use_container_width=True)
+            
            
             st.subheader(choice+'의 팀 평균 경기수는'+str(round(means,1)) + '게임 입니다.')
             
