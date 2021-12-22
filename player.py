@@ -37,7 +37,10 @@ def main():
     ['Home','Rank','Position 선수 선택하기','Team별 선수보기','나라별 선수보기'])
     
     # 'Total'별 선수 페이지 만들기
+    
+    
     if choice == 'Home':
+              
         st.title('축구선수 몸값 TOP500')
         st.image(img3,width=600)
         
@@ -50,13 +53,22 @@ def main():
         #     st.write("선수 이름이 맞지않아요")     
         st.write('선수 이름 정보(높은 몸값 순으로 정렬)')
         st.write(df['Name'].values)
-
         
         
     elif choice == 'Rank':  
-        st.image(img41,width=480)
-        st.title('최고 몸값의  선수 찾기')
-         
+        # st.image(img41,width=480)
+        st.title('최고 몸값 선수들의 순위 보기')             
+        if  st.checkbox('현재 최고 몸값 선수'):
+            st.subheader('Kylian Mbappé Lottin(킬리안 음바페)')
+            st.video('https://youtu.be/E0CnctfxUyI?t=9',format='video/mp4')
+            st.write('''출생년도:1998년12월20일생 
+            \n국적: France  키: 178CM
+            \n 포지션: 스트라이커(ST)
+            \n 키: 178CM''')
+            st.write('소속 팀(team) :Paris Saint-Germain Football Club ')
+            st.image(img6,width=180)      
+            st.dataframe(df.iloc[:1,:11]) 
+            
         if st.checkbox('가장 몸값높은 선수 TOP5 보기'):
             st.write('1위 : 킬리안 음바페 ( 한화: 약1,930억)')
             st.image(img1,width=350,use_column_width=20)
@@ -67,23 +79,11 @@ def main():
             st.write('4위 : 모하메드 살라')
             st.write('공동 5위 : 로멜루 루카쿠,케빈 더 데브라이너,네이마르')
             st.dataframe(df.iloc[:8,:11])
-        if  st.checkbox('현재 최고의 몸값 선수 프로필 보기'):
-            st.subheader('Kylian Mbappé Lottin(킬리안 음바페)')
-            st.image(img1)
-
-            st.write('''출생년도:1998년12월20일생 
-            \n국적: France  키: 178CM
-            \n 포지션: 스트라이커(ST)
-            \n 키: 178CM''')
-            st.write('소속 팀(team) :Paris Saint-Germain Football Club ')
-            st.image(img6,width=180) 
-            
-            # 유튜브 영상 넣는것   <iframe width="560" height="315" src="https://www.youtube.com/embed/QTu_pO8eMxc?start=53" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>         
-            st.dataframe(df.iloc[:1,:11]) 
-            st.text('음바페 하이라이트 링크 : https://www.youtube.com/watch?v=QTu_pO8eMxc')
-        if  st.checkbox('한국 선수 보기'):
-            st.image(img42)
-            st.subheader('손흥민')
+        
+        
+        if  st.checkbox('한국 선수 보기'):  
+            st.subheader('손흥민(Son heung min)')
+            st.video('https://youtu.be/OXlTN6sH6Ag',format='video/mp4')
             st.write('몸값 기준 15위')
             st.write('소속팀: 토트넘 홋스퍼 FC')
             st.write('76.5000유로 (데이터기준 한화 약 1,025억) ')
