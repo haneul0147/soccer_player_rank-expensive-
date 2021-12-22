@@ -27,6 +27,8 @@ def main():
     img6=Image.open('data/image_06.jpg') # 파리 
     img41=Image.open('data/image_41.jpg') #단상
     img42=Image.open('data/image_42.jpg') #손흥민
+    img45=Image.open('data/image_45.jpg') #손흥민
+   
    
     # 몸값에 대한 데이터 가져오기
     df=pd.read_csv('data/players01.csv',index_col=0)
@@ -34,32 +36,23 @@ def main():
     # 사이드 바 만들기
    
     choice=st.sidebar.radio('',
-    ['Home','Rank','Position 선수 선택하기','Team별 선수보기','나라별 선수보기'])
+    ['목차','Rank','Search','Position 선수 선택하기','Team별 선수보기','나라별 선수보기'])
     
     # 'Total'별 선수 페이지 만들기
     
-    
-    if choice == 'Home':
-              
-        st.title('축구선수 몸값 TOP500')
-        st.image(img3,width=600)
-        
-        names =st.text_input('원하는 선수를 입력하세요')
-        # if names == df['Name']:
-        st.dataframe(df.loc[df['Name'] == names,])
-        
-
-        # st.error('선수이름이 맞지 않습니다.')
-        #     st.write("선수 이름이 맞지않아요")     
-        st.write('선수 이름 정보(높은 몸값 순으로 정렬)')
-        st.write(df['Name'].values)
-        
-        
-    elif choice == 'Rank':  
+    if choice == '목차':
+        st.subheader('Welcome')
+        if st.button('Click me'):
+            st.balloons()
+            
+            st.title('BEST player worth')
+            st.title('TOP500!!')
+            st.image(img45,width=900)
+    elif choice == 'Rank':           
         # st.image(img41,width=480)
         st.title('최고 몸값 선수들의 순위 보기')             
         if  st.checkbox('현재 최고 몸값 선수'):
-            st.subheader('Kylian Mbappé Lottin(킬리안 음바페)')
+            st.subheader('Kylian Mbappé Lottin(킬리안 음바페)(한화: 약1,930억)')
             st.video('https://youtu.be/E0CnctfxUyI?t=9',format='video/mp4')
             st.write('''출생년도:1998년12월20일생 
             \n국적: France  키: 178CM
@@ -80,7 +73,7 @@ def main():
             st.write('공동 5위 : 로멜루 루카쿠,케빈 더 데브라이너,네이마르')
             st.dataframe(df.iloc[:8,:11])
         
-        
+    
         if  st.checkbox('한국 선수 보기'):  
             st.subheader('손흥민(Son heung min)')
             st.video('https://youtu.be/OXlTN6sH6Ag',format='video/mp4')
@@ -89,6 +82,27 @@ def main():
             st.write('76.5000유로 (데이터기준 한화 약 1,025억) ')
             st.write('ps: 2021-11-26일자 기준 세계 몸값 6위// 850£ 한화(약 1140억원)')
             st.dataframe(df.loc[df['Country']== 'Korea, South',])
+
+
+
+
+    elif choice == 'Search':
+              
+        st.title('축구선수 몸값 TOP500')
+        st.image(img3,width=600)
+        
+        names =st.text_input('원하는 선수를 입력하면 정보를 알려줍니다.')
+        # if names == df['Name']:
+        st.dataframe(df.loc[df['Name'] == names,])
+        
+
+        # st.error('선수이름이 맞지 않습니다.')
+        #     st.write("선수 이름이 맞지않아요")     
+        st.write('선수 이름 정보(높은 몸값 순으로 정렬)')
+        st.write(df['Name'].values)
+        
+        
+   
     elif choice == 'Position 선수 선택하기':
         # 포지션 파일에 함수 
         run_postiton_app()

@@ -52,5 +52,5 @@ def run_team():
            
             st.subheader(choice+'의팀 평균 골 갯수는'+str(round(means2,1)) + '개 입니다.')
          
-        st.image(img44,width=450)        
+        st.image(img44,width=300)        
         
