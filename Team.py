@@ -18,25 +18,24 @@ def run_team():
         df2=df[df['Club']==choice]
         means=df2['Matches']
         means=means.value_counts()
-        means=round(means,1)
+        
         means2=df2['Goals']
         means2=means2.value_counts()
-        means2=round(means2,1)
+        
 
         if st.checkbox('팀 선수 경기 그래프보기'):
            
             chart_data = pd.DataFrame(means)
             st.bar_chart(chart_data,use_container_width=True)
-            
-            st.subheader(choice+'의 팀 평균 경기수는'+str(means.mean()) + '게임 입니다.')
+            means=means.mean()
+            st.subheader(choice+'의 팀 평균 경기수는'+str(round(means,1)) + '게임 입니다.')
             
         elif st.checkbox('팀 골 평균 그래프 보기'):
-            fig2 = plt.figure()
             
             chart_data = pd.DataFrame(means2)
             st.bar_chart(chart_data,use_container_width=True)
-            
-            st.subheader(choice+'의팀 평균 골 갯수는'+str(means2.mean()) + '개 입니다.')
+            means2=means2.mean()
+            st.subheader(choice+'의팀 평균 골 갯수는'+str(round(means2,1)) + '개 입니다.')
          
         st.image(img44,width=450)        
         
