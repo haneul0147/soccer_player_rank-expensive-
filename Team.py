@@ -5,7 +5,6 @@ import pandas as pd
 from PIL import Image
 import matplotlib.pyplot as plt
 import seaborn as sns
-import plotly.express as px
 df=pd.read_csv('data/players01.csv',index_col=0)
 img44=Image.open('data/image_44.jpg') # 리그사진
 def run_team():  
