@@ -1,4 +1,5 @@
 
+from os import write
 import streamlit as st 
 import pandas as pd 
 from PIL import Image
@@ -12,8 +13,10 @@ def run_team():
     if st.checkbox('Click here') :
               
         
-        
-        st.subheader('원하는 팀을 선택하세요')   
+        col1,col2 = st.columns(2)
+        col1.subheader('원하는 팀을 선택하세요') 
+        col2.image(img44,width=250) 
+        # st.subheader('원하는 팀을 선택하세요')   
         choice=st.selectbox('몸 값이 높은 순으로 나열됩니다.',df['Club'].unique())
         
         st.dataframe(df[df['Club']==choice]) 
@@ -42,17 +45,15 @@ def run_team():
         if st.checkbox('팀 선수 경기 그래프보기'):
            
             chart_data = pd.DataFrame(chart1)
-            st.bar_chart(chart_data,use_container_width=True)
-            
-           
+            st.bar_chart(chart_data,height=350,use_container_width=True)
             st.subheader(choice+'의 팀 평균 경기수는'+str(round(means,1)) + '게임 입니다.')
             
         elif st.checkbox('팀 골 평균 그래프 보기'):
             
             chart_data = pd.DataFrame(chart2)
-            st.bar_chart(chart_data,use_container_width=True)
+            st.bar_chart(chart_data,height=350,use_container_width=True)
            
             st.subheader(choice+'의팀 평균 골 갯수는'+str(round(means2,1)) + '개 입니다.')
          
-        st.image(img44,width=300)        
+        # st.image(img44,width=300)        
         
