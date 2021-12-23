@@ -5,7 +5,7 @@ import streamlit as st
 import pandas as pd
 # 사진을 가져오는 라이브러리
 from PIL import Image
-import matplotlib.pyplot as plt
+# import matlib.pyplot as plt
 import seaborn as sns
 from streamlit.elements.selectbox import SelectboxMixin
 from streamlit.proto.Audio_pb2 import Audio
