@@ -8,7 +8,6 @@ from PIL import Image
 import seaborn as sns
 from streamlit.elements.selectbox import SelectboxMixin
 from streamlit.proto.Audio_pb2 import Audio
-
 from streamlit.proto.Checkbox_pb2 import Checkbox
 from Team import run_team
 from country import run_country
@@ -30,9 +29,11 @@ def main():
     img6=Image.open('data/image_06.jpg') # 파리 
     img41=Image.open('data/image_41.jpg') #단상
     img42=Image.open('data/image_42.jpg') #손흥민
-    img45=Image.open('data/image_45.jpg') #리그 선수
+    img45=Image.open('data/image_45.jpg') #리그 선수 
    
    
+
+
 
     # 몸값에 대한 데이터 가져오기
     df=pd.read_csv('data/players01.csv',index_col=0)
@@ -40,7 +41,6 @@ def main():
     # 사이드 바 만들기
    
     choice=st.sidebar.radio('',
-
     ['목차','Search','Position 선수 선택하기','Team별 선수보기','나라별 선수보기','Rank'])
     
     # 'Total'별 선수 페이지 만들기
@@ -54,6 +54,7 @@ def main():
             st.title('TOP500!!')
             st.image(img45,width=900)
     elif choice == 'Rank':           
+
 
         
         # st.image(img41,width=480)
@@ -94,6 +95,12 @@ def main():
             st.dataframe(df.loc[df['Country']== 'Korea, South',])
 
 
+
+
+    elif choice == 'Search':
+              
+        st.title('축구선수 몸값 TOP500')
+        st.image(img3,width=600)
         
         names =st.text_input('원하는 선수를 입력하면 정보를 알려줍니다.')
         # if names == df['Name']:
@@ -116,7 +123,6 @@ def main():
     
     elif choice == '나라별 선수보기':
         run_country()
-
 
    
 
