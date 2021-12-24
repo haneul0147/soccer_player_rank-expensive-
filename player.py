@@ -125,3 +125,11 @@ def main():
     
     elif choice == '나라별 선수보기':
         run_country()
+
+   
+
+
+
+
+if  __name__ == '__main__':
+    main()
