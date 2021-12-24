@@ -16,7 +16,7 @@ from position import run_postiton_app
 img43=Image.open('data/image_43.jpg') # 프리미어 리그 로고
 st.set_page_config(page_title='Expensive player Top 500',
 page_icon=img43,layout='wide',initial_sidebar_state='collapsed')
->>>>>>> 310e534b3d15a40bdf60c519dd590865c9284563
+
 
 # 해야할것들 : 영상 넣기 , 배경화면 넣기
 def main():
@@ -30,14 +30,10 @@ def main():
     img6=Image.open('data/image_06.jpg') # 파리 
     img41=Image.open('data/image_41.jpg') #단상
     img42=Image.open('data/image_42.jpg') #손흥민
-<<<<<<< HEAD
+    img45=Image.open('data/image_45.jpg') #리그 선수
+   
    
 
-=======
-    img45=Image.open('data/image_45.jpg') #손흥민
-   
-   
->>>>>>> 310e534b3d15a40bdf60c519dd590865c9284563
     # 몸값에 대한 데이터 가져오기
     df=pd.read_csv('data/players01.csv',index_col=0)
     df_name=df['Name'] 
@@ -58,7 +54,7 @@ def main():
             st.title('TOP500!!')
             st.image(img45,width=900)
     elif choice == 'Rank':           
->>>>>>> 310e534b3d15a40bdf60c519dd590865c9284563
+
         
         # st.image(img41,width=480)
         st.title('최고 몸값 선수들의 순위 보기')             
@@ -124,7 +120,6 @@ def main():
 
    
 
->>>>>>> 310e534b3d15a40bdf60c519dd590865c9284563
 
 
 
