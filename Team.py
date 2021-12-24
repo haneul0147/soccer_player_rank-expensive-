@@ -7,15 +7,18 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 df=pd.read_csv('data/players01.csv',index_col=0)
 img44=Image.open('data/image_44.jpg') # 리그사진
+img47=Image.open('data/image_47.jpg') # 리그사진 2 
 def run_team():  
     st.title('Team 별로 선수 보기') 
-    if st.checkbox('Click here') :
-              
+    # if st.checkbox('Click here') :
+    col1,col2 = st.columns(2)
+    col1.image(img47,width=400) 
+    if col2.checkbox('원하는 팀을 찾기')   :       
         
-        col1,col2 = st.columns(2)
-        col1.subheader('원하는 팀을 선택하세요') 
-        col2.image(img44,width=250) 
-        # st.subheader('원하는 팀을 선택하세요')   
+        # col1,col2 = st.columns(2)
+        # col1.subheader('원하는 팀을 선택하세요') 
+        # col2.image(img44,width=250) 
+        st.subheader('원하는 팀을 선택하세요')   
         choice=st.selectbox('몸 값이 높은 순으로 나열됩니다.',df['Club'].unique())
         
         st.dataframe(df[df['Club']==choice]) 
@@ -41,13 +44,13 @@ def run_team():
         
         
 
-        if st.checkbox('팀 선수 경기 그래프보기'):
+        if st.button('팀 선수 경기 그래프보기'):
            
             chart_data = pd.DataFrame(chart1)
             st.bar_chart(chart_data,height=350,use_container_width=True)
             st.subheader(choice+'의 팀 평균 경기수는'+str(round(means,1)) + '게임 입니다.')
             
-        elif st.checkbox('팀 골 평균 그래프 보기'):
+        elif st.button('팀 골 평균 그래프 보기'):
             
             chart_data = pd.DataFrame(chart2)
             st.bar_chart(chart_data,height=350,use_container_width=True)
