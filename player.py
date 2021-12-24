@@ -8,15 +8,7 @@ from PIL import Image
 import seaborn as sns
 from streamlit.elements.selectbox import SelectboxMixin
 from streamlit.proto.Audio_pb2 import Audio
-<<<<<<< HEAD
-from chart import run_chart_app
 
-from position import run_postiton_app
-img43=Image.open('data/image_43.jpg') #프리미어 리그 아이콘
-st.set_page_config(page_title='Expensive soccer player Top 500',
-page_icon=img43,layout='wide',initial_sidebar_state='collapsed')
-
-=======
 from streamlit.proto.Checkbox_pb2 import Checkbox
 from Team import run_team
 from country import run_country
@@ -52,22 +44,7 @@ def main():
     # 사이드 바 만들기
    
     choice=st.sidebar.radio('',
-<<<<<<< HEAD
-    ['Home','Rank','Position 선수 선택하기','차트로 보기'])
-    
-    # 'Total'별 선수 페이지 만들기
-    if choice == 'Home':
-        st.title('축구선수 몸값 TOP500')
-        st.image(img3,use_column_width=True)
-        
-        names =st.text_input('원하는 선수를 입력하세요')
-        if names :
-            st.dataframe(df.loc[df['Name'] == names,])        
-        st.write('선수 이름 정보')
-        st.write(df['Name'].values)
 
-        
-=======
     ['목차','Search','Position 선수 선택하기','Team별 선수보기','나라별 선수보기','Rank'])
     
     # 'Total'별 선수 페이지 만들기
@@ -120,20 +97,7 @@ def main():
             st.write('ps: 2021-11-26일자 기준 세계 몸값 6위// 850£ 한화(약 1140억원)')
             st.dataframe(df.loc[df['Country']== 'Korea, South',])
 
-<<<<<<< HEAD
-    elif choice == '차트로 보기':
-        run_chart_app() 
-           
-            
-=======
 
-
-
-    elif choice == 'Search':
-              
-        st.title('축구선수 몸값 TOP500')
-        st.image(img3,width=600)
->>>>>>> 310e534b3d15a40bdf60c519dd590865c9284563
         
         names =st.text_input('원하는 선수를 입력하면 정보를 알려줍니다.')
         # if names == df['Name']:
@@ -157,9 +121,7 @@ def main():
     elif choice == '나라별 선수보기':
         run_country()
 
-<<<<<<< HEAD
-# https://blog.streamlit.io/introducing-new-layout-options-for-streamlit/
-=======
+
    
 
 >>>>>>> 310e534b3d15a40bdf60c519dd590865c9284563
