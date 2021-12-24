@@ -12,8 +12,8 @@ def run_team():
     st.title('Team 별로 선수 보기') 
     # if st.checkbox('Click here') :
     col1,col2 = st.columns(2)
-    col1.image(img47,width=400) 
-    if col2.checkbox('원하는 팀을 찾기')   :       
+    col2.image(img47,width=400) 
+    if col1.checkbox('원하는 팀을 찾기')   :       
         
         # col1,col2 = st.columns(2)
         # col1.subheader('원하는 팀을 선택하세요') 
