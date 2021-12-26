@@ -1,4 +1,4 @@
-from os import write
+from os import name, write
 from numpy import imag
 import streamlit as st
 # 데이터 프레임 가져오는 라이브러리
@@ -44,7 +44,7 @@ def main():
     if frist=='hello':
         if st.sidebar.checkbox('please settings dark mode / 다크모드로 이용 부탁드립니다.') :
             choice=st.sidebar.radio('',
-            ['목차','Search','Position 선수 선택하기','선수보기','Rank'])
+            ['목차','player Search','Position 선수 선택하기','선수보기','Rank'])
             # 'Total'별 선수 페이지 만들기
             
             if choice == '목차':
@@ -53,7 +53,7 @@ def main():
                 if st.button('Find'):            
                     st.balloons()
                     st.title('BEST player worth TOP500!!')
-                    st.video('https://youtu.be/M5JyZLR68gU?t=10',start_time=13,format='video/mp4')
+                    st.video('https://youtu.be/M5JyZLR68gU?t=10',start_time=11,format='video/mp4')
                 
             elif choice == 'Rank': 
                 choice2=st.sidebar.selectbox('선수보기',
@@ -114,7 +114,7 @@ def main():
 
 
 
-            elif choice == 'Search':
+            elif choice == 'player Search':
                     
                 # st.title('축구선수 몸값 TOP500')
             
@@ -122,14 +122,25 @@ def main():
                 st.image(img45,width=900)
                 
                 names =st.text_input('원하는 선수를 입력하면 정보를 알려줍니다.')
-                # if names == df['Name']:
-                st.dataframe(df.loc[df['Name'] == names,])
+                # if names in df['Name']:
+                # df['Name'].str.contains(names)
+                # st.dataframe(df.loc[df['Name'] == names,])
+                names=names.title()
+
+               
+                
+                
+                if [df['Name'].str.contains(names)] and len(names)>=1 :
+                    st.dataframe(df.loc[df['Name'].str.contains(names),])
+                                
+                elif len(names) == 0:
+                    pass
+                elif [df['Name'].str.contains(names, na=False)]:
+                    st.error('찾으시는 player의 데이터는 존재하지 않습니다')
+
                 
 
-                # st.error('선수이름이 맞지 않습니다.')
-                #     st.write("선수 이름이 맞지않아요")     
-            
-                st.write('선수 이름 정보(높은 몸값 순으로 정렬)')
+                st.subheader('↓선수 이름 정보(높은 몸값 순으로 정렬)')
                 
                 
                 col1, col2 = st.columns(2)
