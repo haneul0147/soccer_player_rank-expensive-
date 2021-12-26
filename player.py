@@ -40,6 +40,7 @@ def main():
     df_name=df['Name'] 
     # 사이드 바 만들기
     frist=st.sidebar.text_input('"hello"을 입력해주세요')
+    frist=frist.lower()
     if frist=='hello':
         if st.sidebar.checkbox('please settings dark mode / 다크모드로 이용 부탁드립니다.') :
             choice=st.sidebar.radio('',
