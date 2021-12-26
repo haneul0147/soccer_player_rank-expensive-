@@ -119,20 +119,16 @@ def main():
                 # st.title('축구선수 몸값 TOP500')
             
                 st.title('축구선수 몸값 TOP500') 
-                st.image(img45,width=900)
-                
+                st.image(img45,width=900)        
                 names =st.text_input('원하는 선수를 입력하면 정보를 알려줍니다.')
                 # if names in df['Name']:
                 # df['Name'].str.contains(names)
                 # st.dataframe(df.loc[df['Name'] == names,])
                 names=names.title()
-
-               
-                
-                
+           
                 if [df['Name'].str.contains(names)] and len(names)>=1 :
                     st.dataframe(df.loc[df['Name'].str.contains(names),])
-                                
+                    st.write('1 £(파운드) = 1592 ₩(원)')            
                 elif len(names) == 0:
                     pass
                 elif [df['Name'].str.contains(names, na=False)]:
