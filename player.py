@@ -53,7 +53,7 @@ def main():
                 if st.button('Find'):            
                     st.balloons()
                     st.title('BEST player worth TOP500!!')
-                    st.video('https://www.youtube.com/watch?v=43UthPh8MHE',format='video/mp4')
+                    st.video('https://www.youtube.com/watch?v=M5JyZLR68gU',format='video/mp4')
              
             elif choice == 'Rank': 
                 choice2=st.sidebar.selectbox('선수보기',
