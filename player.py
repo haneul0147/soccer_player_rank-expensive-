@@ -159,6 +159,7 @@ def main():
                 run_postiton_app()
             
             elif choice == '선수보기':
+                st.write('원하는 것을 선택해주세요')
                 choice3=st.sidebar.selectbox('',['선택','Team별 선수보기','나라별 선수보기'])  
             
                 if choice3 == 'Team별 선수보기':
