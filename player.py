@@ -34,17 +34,22 @@ def main():
    
 
 
-
-    # 몸값에 대한 데이터 가져오기
+ # 몸값에 대한 데이터 가져오기
     df=pd.read_csv('data/players01.csv',index_col=0)
     df_name=df['Name'] 
     # 사이드 바 만들기
-    frist=st.sidebar.text_input('"hello"을 입력해주세요')
-    frist=frist.lower()
-    if frist=='hello':
-        if st.sidebar.checkbox('please settings dark mode / 다크모드로 이용 부탁드립니다.') :
+    choice5 =st.sidebar.selectbox('',['start','hello'])
+    if choice5 == 'start':
+        st.subheader('hello')
+        st.write('please settings dark mode / 다크모드로 이용 부탁드립니다.')
+    elif choice5 == 'hello':
+        frist=st.sidebar.text_input('"hello"을 입력해주세요')
+        frist=frist.lower()
+        if frist=='hello':
+            
+           
             choice=st.sidebar.radio('',
-            ['목차','player Search','Position 선수 선택하기','선수보기','Rank'])
+            ['목차','player Search','Position 선수 선택하기','선수보기','Rank','about'])
             # 'Total'별 선수 페이지 만들기
             
             if choice == '목차':
@@ -160,9 +165,16 @@ def main():
                     run_team()        
                 if choice3 == '나라별 선수보기':
                     run_country()
-    elif frist!= 'hello' and len(frist)>=1 :
-        st.sidebar.error('실패 :다시 입력해주세요')
-        
+                
+            elif choice == 'about':
+                    st.image(img48,width=450)
+                    st.subheader('데이터는 https://www.kaggle.com/ 에서 이용하였습니다.')
+                    st.write('출처:https://www.kaggle.com/sanjeetsinghnaik/most-expensive-footballers-2021')
+                    st.write('데이터는 2021년 기준입니다.')
+                    st.write('주의) 몸값에 경우 골/매치와 상관없이 이벤트,마케팅 용으로 몸값이 선정되어 있기도 합니다.')
+        elif frist!= 'hello' and len(frist)>=1 :
+            st.sidebar.error('실패 :다시 입력해주세요')
+
         
         
     
