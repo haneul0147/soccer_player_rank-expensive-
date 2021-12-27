@@ -50,7 +50,7 @@ def run_team():
             st.bar_chart(chart_data,height=350,use_container_width=True)
             st.subheader(choice+'의 팀 평균 경기수는'+str(round(means,1)) + '게임 입니다.')
             
-        elif st.button('팀 골 평균 그래프 보기'):
+        if st.button('팀 골 평균 그래프 보기'):
             
             chart_data = pd.DataFrame(chart2)
             st.bar_chart(chart_data,height=350,use_container_width=True)
