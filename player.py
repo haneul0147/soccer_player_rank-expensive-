@@ -30,7 +30,7 @@ def main():
     img41=Image.open('data/image_41.jpg') #단상
     img42=Image.open('data/image_42.jpg') #손흥민
     img45=Image.open('data/image_45.jpg') #리그 선수 
-   
+    img48=Image.open('data/image_48.jpg') #캐글
    
 
 
