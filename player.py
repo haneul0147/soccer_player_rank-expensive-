@@ -167,7 +167,7 @@ def main():
                     run_country()
                 
             elif choice == 'about':
-                    st.image(img48,width=450)
+#                     st.image(img48,width=450)
                     st.subheader('데이터는 https://www.kaggle.com/ 에서 이용하였습니다.')
                     st.write('출처:https://www.kaggle.com/sanjeetsinghnaik/most-expensive-footballers-2021')
                     st.write('데이터는 2021년 기준입니다.')
