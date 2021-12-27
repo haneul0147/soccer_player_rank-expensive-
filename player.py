@@ -50,7 +50,7 @@ def main():
             if choice == '목차':
                 st.title('Welcome')
                 st.subheader('Who is your favorite football player?')
-                if st.button('Find'):            
+                if st.button('찾아보기'):            
                     st.balloons()
                     st.title('BEST player worth TOP500!!')
                     st.video('https://youtu.be/3DHVekozNIo',format='video/mp4')
