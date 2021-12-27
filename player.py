@@ -53,8 +53,8 @@ def main():
                 if st.button('Find'):            
                     st.balloons()
                     st.title('BEST player worth TOP500!!')
-                    
-                    st.video('https://youtu.be/E0CnctfxUyI?t=9',format='video/mp4')
+                    st.video('https://youtu.be/M5JyZLR68gU',format='video/mp4')
+             
             elif choice == 'Rank': 
                 choice2=st.sidebar.selectbox('선수보기',
                     ['최고 몸값 선수들의 순위 보기','가장 몸값높은 선수 TOP5 보기','한국 선수 보기'])                  
