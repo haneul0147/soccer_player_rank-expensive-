@@ -11,6 +11,7 @@ from streamlit.proto.Audio_pb2 import Audio
 from streamlit.proto.Checkbox_pb2 import Checkbox
 from Team import run_team
 from country import run_country
+from develop import develop
 from position import run_postiton_app
 img43=Image.open('data/image_43.jpg') # 프리미어 리그 로고
 st.set_page_config(page_title='Expensive player Top 500',
@@ -49,7 +50,7 @@ def main():
             
            
             choice=st.sidebar.radio('',
-            ['목차','player Search','Position 선수 선택하기','선수보기','Rank','about'])
+            ['목차','player Search','Position 선수 선택하기','선수보기','Rank','about','개발'])
             # 'Total'별 선수 페이지 만들기
             
             if choice == '목차':
@@ -173,6 +174,8 @@ def main():
                     st.write('출처:https://www.kaggle.com/sanjeetsinghnaik/most-expensive-footballers-2021')
                     st.write('데이터는 2021년 기준입니다.')
                     st.write('주의) 몸값에 경우 골/매치와 상관없이 이벤트,마케팅 용으로 몸값이 선정되어 있기도 합니다.')
+            elif choice == '개발':
+                develop()
         elif frist!= 'hello' and len(frist)>=1 :
             st.sidebar.error('실패 :다시 입력해주세요')
 
