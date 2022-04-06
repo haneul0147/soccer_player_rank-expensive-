@@ -132,3 +132,7 @@ def run_ST():
             st.write('소속팀:FC 샤흐타르 도네츠크')
             st.image(img16,width=450)               
             st.dataframe(rw_mat.iloc[:3,[1,7,4,6]])
+
+
+      
+
